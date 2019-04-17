@@ -4,11 +4,16 @@
   width: 70%;
   margin: 0 auto;
   border: 2px solid #bbb;
+  height:70%;
+  @media (max-width: 600px){
+    width:100%;
+    //background: red;
+  }
 }
 
 .carousel-item > div {
   height: 25rem;
-  line-height: 31.25rem;
+  line-height: 500px;
   font-size: 1.5em;
   text-align: center;
   color: #fff;
@@ -38,6 +43,12 @@ width:100%;
   margin: 0;
   width: 500%;
   transition: transform 0.3s cubic-bezier(.694, .0482, .335, 1);
+  // @media(max-width: 900px){
+  //   height:350px;
+  // }
+  @media(max-width:500px){
+    height:335px;
+  }
 }
 
 .carousel-item {
