@@ -92,10 +92,16 @@ body {
   width: 70%;
   margin: 0 auto;
   border: 2px solid #bbb;
+  height: 70%;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
 }
 .carousel-item > div {
   height: 25rem;
-  line-height: 31.25rem;
+  line-height: 500px;
   font-size: 1.5em;
   text-align: center;
   color: #fff;
@@ -120,6 +126,11 @@ img {
   margin: 0;
   width: 500%;
   transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+@media (max-width: 500px) {
+  .carousel-container {
+    height: 335px;
+  }
 }
 .carousel-item {
   position: relative;
@@ -212,13 +223,29 @@ header {
   align-items: center;
   background-color: #01172F;
 }
+@media (max-width: 600px) {
+  header {
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+}
 header h1 {
   font-size: 60px;
   color: white;
 }
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
 .content {
   width: 70%;
   margin: 25px auto;
+}
+@media (max-width: 900px) {
+  .content {
+    width: 100%;
+  }
 }
 .content .bot-content {
   display: flex;
@@ -318,4 +345,14 @@ footer {
 }
 .AUimg:hover {
   transform: scale(1.2);
+}
+@media (max-width: 800px) {
+  .AUimg {
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .AUimg {
+    height: 100px;
+  }
 }
