@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+  box-sizing: border-box;
+  min-width: 300px;
+  margin: 0;
+  background-color: #4D7EA8;
+}
+.dropdown {
+  z-index: 2;
+  position: absolute;
+  left: 25px;
+  cursor: pointer;
+}
+.dropdown .dropdown-button {
+  height: 55px;
+  width: 55px;
+}
+.dropdown .dropdown-button .btn-icon {
+  height: 5px;
+  width: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  background-color: white;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all ease 0.5s;
+}
+.dropdown .dropdown-button .btn-icon::before,
+.dropdown .dropdown-button .btn-icon::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  margin: auto;
+  width: 50%;
+}
+.dropdown .dropdown-button .btn-icon::before {
+  top: -10px;
+  left: 0;
+  transform-origin: left;
+}
+.dropdown .dropdown-button .btn-icon::after {
+  bottom: -10px;
+  right: 0;
+  transform-origin: right;
+}
+.dropdown .dropdown-button .open {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.dropdown .dropdown-button .open::before {
+  top: 0;
+  transform: translateX(100%) rotate(-90deg);
+}
+.dropdown .dropdown-button .open::after {
+  bottom: 0;
+  transform: translateX(-100%) rotate(-90deg);
+}
+.dropdown .dropdown-content {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.dropdown .dropdown-content :hover {
+  background-color: #01172F;
+  color: white;
+}
+.dropdown .dropdown-link {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #01172F;
+}
+.dropdown .dropdown-hidden {
+  display: none;
+}
+/* Page */
+.container {
+  width: 70%;
+  margin: 0 auto;
+  border: 2px solid #bbb;
+}
+.carousel-item > div {
+  height: 25rem;
+  line-height: 31.25rem;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+.item {
+  background-color: #828489;
+}
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-container {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 500%;
+  transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+}
+.carousel-item {
+  position: relative;
+  float: left;
+  width: 20%;
+}
+/* Next / Prev Buttons */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  background-color: #222;
+  opacity: 0.7;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+.carousel-prev {
+  left: 2%;
+  padding-right: 3px;
+}
+.carousel-prev::before {
+  content: '\f053';
+  font-family: "FontAwesome";
+}
+.carousel-next {
+  right: 2%;
+  padding-left: 3px;
+}
+.carousel-next::before {
+  content: '\f054';
+  font-family: "FontAwesome";
+}
+.carousel-prev:hover,
+.carousel-next:hover {
+  opacity: 1;
+}
+/* Pagination */
+.carousel-pagination {
+  list-style: none;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  width: 50%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+}
+.carousel-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  cursor: pointer;
+  margin: 0 7px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition-property: transform, opacity, background-color;
+  transition-duration: 0.3s;
+}
+.carousel-bullet:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.carousel-bullet.active-bullet,
+.carousel-bullet.active-bullet:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: #fff;
+  cursor: default;
+}
+header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #01172F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #01172F;
+}
+header h1 {
+  font-size: 60px;
+  color: white;
+}
+.content {
+  width: 70%;
+  margin: 25px auto;
+}
+.content .bot-content {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .content .bot-content {
+    flex-direction: column;
+  }
+}
+.content .bot-content .right {
+  line-height: 1.5;
+  color: white;
+  border-radius: 20px;
+  background-color: #01172F;
+  padding: 20px;
+  margin: 20px 10px;
+}
+.content .bot-content .right h2 {
+  padding-bottom: 15px;
+}
+.content .bot-content .left {
+  line-height: 1.5;
+  color: white;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 20px;
+  background-color: #01172F;
+}
+.content .bot-content .left h2 {
+  padding-bottom: 15px;
+}
+footer {
+  border-top: 1px solid #01172F;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  color: white;
+  background-color: #01172F;
+}
+.subhead {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 25px;
+}
+.subhead a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #01172F;
+  cursor: pointer;
+}
+.AUcontent {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .AUcontent {
+    flex-direction: column;
+  }
+}
+.AUcontent .left-content {
+  flex-direction: column;
+  margin: 40px;
+}
+@media (max-width: 800px) {
+  .AUcontent .left-content .top-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 800px) {
+  .AUcontent .left-content .bot-img {
+    display: flex;
+    justify-content: center;
+  }
+}
+.AUcontent .right-content {
+  width: 30%;
+  margin: 20px auto;
+  line-height: 2;
+}
+@media (max-width: 800px) {
+  .AUcontent .right-content {
+    width: 70%;
+  }
+}
+.AUsub {
+  width: 45%;
+  margin: 35px auto;
+  text-align: center;
+  line-height: 1.5;
+}
+.AUimg {
+  height: 200px;
+  width: auto;
+  margin: -2px;
+  transition: transform 0.5s;
+}
+.AUimg:hover {
+  transform: scale(1.2);
+}

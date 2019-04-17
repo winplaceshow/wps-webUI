@@ -1,0 +1,150 @@
+@import './mixins.less';
+//light blue #4D7EA8
+//darkblue #01172F
+//grey //#828489
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+
+html{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	box-sizing: border-box;
+	min-width: 300px;
+  margin: 0;
+  background-color:#4D7EA8; 
+}
+@import '../components/Dropdown/Dropdown.less';
+@import '../components/Carousel/Carousel.less';
+
+header{
+  width:100%;
+  height:100px;
+  border-bottom: 1px solid #01172F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #01172F; 
+    h1{
+    font-size: 60px;
+    color: white;
+  }
+}
+
+.content{
+  width:70%;
+  margin: 25px auto;
+  .bot-content{
+    display: flex;
+    @media (max-width:800px){
+      flex-direction: column;
+    }
+    .right{
+      h2{
+        padding-bottom: 15px;
+      }
+      line-height: 1.5;
+      color: white;
+      padding:20px;
+      border-radius: 20px;
+      background-color: #01172F;
+      padding: 20px;
+      margin: 20px 10px;
+    }
+
+
+    
+    .left{
+      h2{
+        padding-bottom: 15px;
+        
+      }
+      line-height: 1.5;
+      color: white;
+      padding:20px;
+      margin: 20px 10px;
+      border-radius: 20px;
+      background-color: #01172F;
+    }
+  }
+}
+
+
+
+footer{
+  border-top: 1px solid #01172F;
+  display: flex;
+  padding: 30px;
+  justify-content: center; 
+  color:white;
+  background-color: #01172F;
+}
+
+.subhead{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 25px;
+  a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #01172F;
+    cursor: pointer;
+  }
+  
+}
+
+.AUcontent{
+  display: flex;
+  @media (max-width:800px){
+    //background-color: red;
+    flex-direction:column;
+  }
+  .left-content{
+    flex-direction: column;
+    margin: 40px;
+  .top-img{
+    @media (max-width:800px){
+      display: flex;
+      justify-content: center;
+    }
+  }  
+  .bot-img{
+    @media (max-width:800px){
+      display: flex;
+      justify-content: center;
+    }
+  }
+  }
+  .right-content{
+    width:30%;
+    margin: 20px auto;
+    line-height: 2;
+  @media (max-width:800px){
+    width:70%;
+  }
+  }
+}
+
+.AUsub{
+  width:45%;
+  margin: 35px auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+.AUimg{
+  height:200px;
+  width:auto;
+  margin: -2px;
+  transition: transform .5s;
+  &:hover{
+    //cursor: pointer;
+    transform: scale(1.2);
+  }
+}
