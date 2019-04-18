@@ -262,6 +262,7 @@ header h1 {
   }
 }
 .content .bot-content .right {
+  display: none;
   line-height: 1.5;
   color: white;
   border-radius: 1.25rem;
