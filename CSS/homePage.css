@@ -333,6 +333,10 @@ footer {
   margin: 1.25rem auto;
   line-height: 2;
 }
+.AUcontent .right-content li {
+  list-style-type: square;
+  margin-left: 50px;
+}
 @media (max-width: 800px) {
   .AUcontent .right-content {
     width: 70%;
