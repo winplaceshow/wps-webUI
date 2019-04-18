@@ -14,7 +14,7 @@ html{
 
 body {
 	box-sizing: border-box;
-	min-width: 300px;
+	min-width: 18.75rem;
   margin: 0;
   background-color:#4D7EA8; 
 }
@@ -23,7 +23,7 @@ body {
 
 header{
   width:100%;
-  height:100px;
+  height: 6.25rem;
   border-bottom: 1px solid #01172F;
   display: flex;
   justify-content: space-around;
@@ -34,17 +34,18 @@ header{
     padding-right: 15px;
   }
     h1{
-    font-size: 60px;
+    font-size: 3.75rem;
     color: white;
+    text-transform: uppercase;
     @media(max-width:600px){
-      font-size: 30px;
+      font-size: 1.875rem;
     }
   }
 }
 
 .content{
   width:70%;
-  margin: 25px auto;
+  margin: 1.563rem auto;
   @media (max-width: 900px){
     width:100%;
   }
@@ -56,29 +57,29 @@ header{
     }
     .right{
       h2{
-        padding-bottom: 15px;
+        padding-bottom: 0.9375rem;
       }
       line-height: 1.5;
       color: white;
-      padding:20px;
-      border-radius: 20px;
+      padding:1.25rem;
+      border-radius: 1.25rem;
       background-color: #01172F;
-      padding: 20px;
-      margin: 20px 10px;
+      padding: 1.25rem;
+      margin: 1.25rem 0.625rem;
     }
 
 
     
     .left{
       h2{
-        padding-bottom: 15px;
+        padding-bottom: 0.9375rem;
         
       }
       line-height: 1.5;
       color: white;
-      padding:20px;
-      margin: 20px 10px;
-      border-radius: 20px;
+      padding: 1.25rem;
+      margin: 1.25rem 0.625rem;
+      border-radius: 1.25rem;
       background-color: #01172F;
     }
   }
@@ -89,7 +90,7 @@ header{
 footer{
   border-top: 1px solid #01172F;
   display: flex;
-  padding: 30px;
+  padding: 1.875rem;
   justify-content: center; 
   color:white;
   background-color: #01172F;
@@ -99,10 +100,11 @@ footer{
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-bottom: 25px;
+  padding-bottom: 1.563rem;
   a{
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #01172F;
     cursor: pointer;
   }
@@ -117,7 +119,7 @@ footer{
   }
   .left-content{
     flex-direction: column;
-    margin: 40px;
+    margin: 2.5rem;
   .top-img{
     @media (max-width:800px){
       display: flex;
@@ -133,7 +135,7 @@ footer{
   }
   .right-content{
     width:30%;
-    margin: 20px auto;
+    margin: 1.25rem auto;
     line-height: 2;
   @media (max-width:800px){
     width:70%;
@@ -143,7 +145,7 @@ footer{
 
 .AUsub{
   width:45%;
-  margin: 35px auto;
+  margin: 2.188rem auto;
   text-align: center;
   line-height: 1.5;
 }
@@ -159,9 +161,20 @@ footer{
     transform: scale(1.2);
   }
   @media (max-width:800px){
-    height:150px;
+    height:9.375rem;
   }
   @media (max-width:600px){
-    height:100px;
+    height: 6.25rem;
+  }
+  @media (max-width:400px){
+      display: none;
 }
+}
+
+.AUimg.shown{
+  @media (max-width:400px){
+  display: flex;
+  height:200px;
+  width:auto;
+  }
 }
